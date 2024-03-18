@@ -32,7 +32,7 @@ function clear() {
           <span v-else id="display" class="font-bold text-white text-2xl">{{
             0
           }}</span>
-          <span v-if="displayOutput" class="font-bold text-white text-normal uppercase sm:text-lg"
+          <span v-if="displayOutput != null" class="font-bold text-white text-normal uppercase sm:text-lg"
             >= {{ displayOutput }}</span
           >
         </div>
@@ -40,118 +40,118 @@ function clear() {
       <div class="grid gap-4 my-5 px-5 grid-cols-4">
         <button
           @click="del"
-          class="text-white font-bold bg-red-500 text-normal uppercase sm:text-lg aspect-auto p-3 rounded-full"
+          class="h-[4.1rem] w-[4.1rem] flex items-center justify-center text-white font-bold bg-red-500 text-normal uppercase sm:text-lg aspect-auto p-3 rounded-full"
         >
           Del
         </button>
         <button
           @click="clear"
-          class="text-white font-bold bg-red-500 text-normal uppercase sm:text-lg aspect-auto p-3 rounded-full"
+          class="h-[4.1rem] w-[4.1rem] flex items-center justify-center text-white font-bold bg-red-500 text-normal uppercase sm:text-lg aspect-auto p-3 rounded-full"
         >
           clr
         </button>
         <button
           @click="showToDisplay(`%`)"
-          class="bg-orange-500 text-white font-bold text-normal uppercase sm:text-lg aspect-auto p-3 rounded-full"
+          class="h-[4.1rem] w-[4.1rem] flex items-center justify-center bg-orange-500 text-white font-bold text-normal uppercase sm:text-lg aspect-auto p-3 rounded-full"
         >
           %
         </button>
         <button
           @click="showToDisplay(`/`)"
-          class="bg-orange-500 text-white font-bold text-normal uppercase sm:text-lg aspect-auto p-3 rounded-full"
+          class="h-[4.1rem] w-[4.1rem] flex items-center justify-center bg-orange-500 text-white font-bold text-normal uppercase sm:text-lg aspect-auto p-3 rounded-full"
         >
           /
         </button>
         <button
           @click="showToDisplay(7)"
-          class="bg-gray-600 hover:ring-1 transition-all hover:ring-slate-400  text-white font-bold text-normal uppercase sm:text-lg aspect-auto p-3 rounded-full"
+          class="h-[4.1rem] w-[4.1rem] flex items-center justify-center bg-gray-600 hover:ring-1 transition-all hover:ring-slate-400  text-white font-bold text-normal uppercase sm:text-lg aspect-auto p-3 rounded-full"
         >
           7
         </button>
         <button
           @click="showToDisplay(8)"
-          class="bg-gray-600 hover:ring-1 transition-all hover:ring-slate-400  text-white font-bold text-normal uppercase sm:text-lg aspect-auto p-3 rounded-full"
+          class="h-[4.1rem] w-[4.1rem] flex items-center justify-center bg-gray-600 hover:ring-1 transition-all hover:ring-slate-400  text-white font-bold text-normal uppercase sm:text-lg aspect-auto p-3 rounded-full"
         >
           8
         </button>
         <button
           @click="showToDisplay(9)"
-          class="bg-gray-600 hover:ring-1 transition-all hover:ring-slate-400  text-white font-bold text-normal uppercase sm:text-lg aspect-auto p-3 rounded-full"
+          class="h-[4.1rem] w-[4.1rem] flex items-center justify-center bg-gray-600 hover:ring-1 transition-all hover:ring-slate-400  text-white font-bold text-normal uppercase sm:text-lg aspect-auto p-3 rounded-full"
         >
           9
         </button>
         <button
           @click="showToDisplay(`*`)"
-          class="bg-orange-500 text-white font-bold text-normal uppercase sm:text-lg aspect-auto p-3 rounded-full"
+          class="h-[4.1rem] w-[4.1rem] flex items-center justify-center bg-orange-500 text-white font-bold text-normal uppercase sm:text-lg aspect-auto p-3 rounded-full"
         >
           *
         </button>
 
         <button
           @click="showToDisplay(4)"
-          class="bg-gray-600 hover:ring-1 transition-all hover:ring-slate-400  text-white font-bold text-normal uppercase sm:text-lg aspect-auto p-3 rounded-full"
+          class="h-[4.1rem] w-[4.1rem] flex items-center justify-center bg-gray-600 hover:ring-1 transition-all hover:ring-slate-400  text-white font-bold text-normal uppercase sm:text-lg aspect-auto p-3 rounded-full"
         >
           4
         </button>
         <button
           @click="showToDisplay(5)"
-          class="bg-gray-600 hover:ring-1 transition-all hover:ring-slate-400  text-white font-bold text-normal uppercase sm:text-lg aspect-auto p-3 rounded-full"
+          class="h-[4.1rem] w-[4.1rem] flex items-center justify-center bg-gray-600 hover:ring-1 transition-all hover:ring-slate-400  text-white font-bold text-normal uppercase sm:text-lg aspect-auto p-3 rounded-full"
         >
           5
         </button>
         <button
           @click="showToDisplay(6)"
-          class="bg-gray-600 hover:ring-1 transition-all hover:ring-slate-400  text-white font-bold text-normal uppercase sm:text-lg aspect-auto p-3 rounded-full"
+          class="h-[4.1rem] w-[4.1rem] flex items-center justify-center bg-gray-600 hover:ring-1 transition-all hover:ring-slate-400  text-white font-bold text-normal uppercase sm:text-lg aspect-auto p-3 rounded-full"
         >
           6
         </button>
         <button
           @click="showToDisplay(`-`)"
-          class="bg-orange-500 text-white font-bold text-normal uppercase sm:text-lg aspect-auto p-3 rounded-full"
+          class="h-[4.1rem] w-[4.1rem] flex items-center justify-center bg-orange-500 text-white font-bold text-normal uppercase sm:text-lg aspect-auto p-3 rounded-full"
         >
           -
         </button>
 
         <button
           @click="showToDisplay(1)"
-          class="bg-gray-600 hover:ring-1 transition-all hover:ring-slate-400  text-white font-bold text-normal uppercase sm:text-lg aspect-auto p-3 rounded-full"
+          class="h-[4.1rem] w-[4.1rem] flex items-center justify-center bg-gray-600 hover:ring-1 transition-all hover:ring-slate-400  text-white font-bold text-normal uppercase sm:text-lg aspect-auto p-3 rounded-full"
         >
           1
         </button>
         <button
           @click="showToDisplay(2)"
-          class="bg-gray-600 hover:ring-1 transition-all hover:ring-slate-400  text-white font-bold text-normal uppercase sm:text-lg aspect-auto p-3 rounded-full"
+          class="h-[4.1rem] w-[4.1rem] flex items-center justify-center bg-gray-600 hover:ring-1 transition-all hover:ring-slate-400  text-white font-bold text-normal uppercase sm:text-lg aspect-auto p-3 rounded-full"
         >
           2
         </button>
         <button
           @click="showToDisplay(3)"
-          class="bg-gray-600 hover:ring-1 transition-all hover:ring-slate-400  text-white font-bold text-normal uppercase sm:text-lg aspect-auto p-3 rounded-full"
+          class="h-[4.1rem] w-[4.1rem] flex items-center justify-center bg-gray-600 hover:ring-1 transition-all hover:ring-slate-400  text-white font-bold text-normal uppercase sm:text-lg aspect-auto p-3 rounded-full"
         >
           3
         </button>
         <button
           @click="showToDisplay(`+`)"
-          class="bg-orange-500 text-white font-bold text-normal uppercase sm:text-lg aspect-auto p-3 rounded-full"
+          class="h-[4.1rem] w-[4.1rem] flex items-center justify-center bg-orange-500 text-white font-bold text-normal uppercase sm:text-lg aspect-auto p-3 rounded-full"
         >
           +
         </button>
 
         <button
           @click="showToDisplay(0)"
-          class="bg-gray-600 hover:ring-1 transition-all hover:ring-slate-400  text-white font-bold text-normal uppercase sm:text-lg aspect-auto p-3 rounded-full col-span-2"
+          class=" bg-gray-600 hover:ring-1 transition-all hover:ring-slate-400  text-white font-bold text-normal uppercase sm:text-lg aspect-auto p-3 rounded-full col-span-2"
         >
           0
         </button>
         <button
           @click="showToDisplay(`.`)"
-          class="bg-gray-600 hover:ring-1 transition-all hover:ring-slate-400  text-white font-bold text-normal uppercase sm:text-lg aspect-auto p-3 rounded-full"
+          class="h-[4.1rem] w-[4.1rem] flex items-center justify-center bg-gray-600 hover:ring-1 transition-all hover:ring-slate-400  text-white font-bold text-normal uppercase sm:text-lg aspect-auto p-3 rounded-full"
         >
           .
         </button>
         <button
           @click="calc"
-          class="bg-orange-500 text-white font-bold text-normal uppercase sm:text-lg aspect-auto p-3 rounded-full"
+          class="h-[4.1rem] w-[4.1rem] flex items-center justify-center bg-orange-500 text-white font-bold text-normal uppercase sm:text-lg aspect-auto p-3 rounded-full"
         >
           =
         </button>
