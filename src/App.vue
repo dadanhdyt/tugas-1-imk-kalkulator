@@ -24,15 +24,15 @@ function clear() {
   <div class="bg-gray-900 flex px-3 sm:px-0 items-center justify-center h-screen">
     <div class="sm:max-w-sm rounded overflow-hidden shadow-xl w-full mx-auto bg-gray-700">
       <div class="text-white text-center mx-auto p-2 font-bold">KALKULATOR SEDERHANA</div>
-      <div class="bg-slate-500 flex justify-end items-end p-5 h-[100px]">
+      <div class="bg-slate-500 flex justify-end items-end p-5 h-[150px]">
         <div class="flex flex-col items-end gap-2">
-          <span v-if="display" id="display" class="font-bold text-white text-2xl">{{
+          <span v-if="display" id="display" class="font-bold text-white text-6xl">{{
             display
           }}</span>
-          <span v-else id="display" class="font-bold text-white text-2xl">{{
+          <span v-else id="display" class="font-bold text-white text-5xl">{{
             0
           }}</span>
-          <span v-if="displayOutput != null" class="font-bold text-white text-normal uppercase sm:text-lg"
+          <span v-if="displayOutput != null" class="font-bold text-white text-normal uppercase text-3xl"
             >= {{ displayOutput }}</span
           >
         </div>
