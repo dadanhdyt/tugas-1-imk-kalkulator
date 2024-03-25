@@ -1,6 +1,6 @@
 <script setup>
 import 'intro.js/minified/introjs.min.css';
-import 'intro.js/themes/introjs-modern.css';
+import 'intro.js/themes/introjs-flattener.css';
 
 import {
   onMounted,
