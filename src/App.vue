@@ -66,7 +66,7 @@ function clear() {
           <span v-else id="display" class="text-5xl font-bold text-white">{{
               0
             }}</span>
-          <span v-if="displayOutput != null" class="text-3xl font-bold text-white uppercase text-normal">= {{ displayOutput ? displayOutput : '0'
+          <span v-if="displayOutput != null" class="text-3xl font-bold text-white uppercase text-normal">= {{ displayOutput ? displayOutput.toLocaleString() : '0'
             }}</span>
         </div>
       </div>
